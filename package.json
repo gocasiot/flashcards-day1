@@ -2,7 +2,11 @@
   "name": "workshop-scaffold",
   "version": "1.0.0",
   "dependencies": {
-    "express": "^4.11.2"
+    "express": "^4.11.2",
+    "path": "^0.12.7"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
 }

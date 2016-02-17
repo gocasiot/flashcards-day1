@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<!--No need to type '/public'. Express middleware is 
+    	serving static files in the public folder. -->
+    	<script src='angular.js' defer></script>
+    	<script src='app.js' defer></script>
+        <title>Flash Cards</title>
+        <!-- We've provided some styles for you, aren't we nice? -->
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+    	<div ng-app="FlashCards">
+    		<div class="flash-card" ng-controller="FlashCardController">
+			    <h1>{{ flashCard.question }}</h1>
+			    <ul class="flash-card-answers">
+			        <li class="flash-card-answer" ng-repeat="answer in flashCard.answers" ng-click="answerQuestion(answer)">
+                        {{ answer.text }}
+			        </li>
+			    </ul>
+                <!-- <ul class="flash-card-answers">
+                    <li class="flash-card-answer">
+                        {{ flashCard.answers[0].text }}
+                    </li>
+                    <li class="flash-card-answer">
+                        {{ flashCard.answers[1].text }}
+                    </li>
+                    <li class="flash-card-answer">
+                        {{ flashCard.answers[2].text }}
+                    </li>
+                </ul> -->
+			</div>
+    	</div>
+    </body>
+</html>
